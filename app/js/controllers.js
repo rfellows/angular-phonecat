@@ -11,10 +11,12 @@ function PhoneListCtrl($scope, $http) {
 }
 
 
-function PhoneDetailCtrl($scope, $routeParams) {
-  $scope.phoneId = $routeParams.phoneId;
+function PhoneDetailCtrl($scope, $routeParams, $http) {
+  $http.get('phones/' + $routeParams.phoneId + '.json').success(function(data) {
+    $scope.phone = data;
+  });
 }
 
 
 myApp.controller('PhoneListCtrl', ['$scope', '$http', PhoneListCtrl]);
-myApp.controller('PhoneDetailCtrl', ['$scope', '$routeParams', PhoneDetailCtrl]);
+myApp.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http', PhoneDetailCtrl]);
