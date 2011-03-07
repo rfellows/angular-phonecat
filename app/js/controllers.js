@@ -10,4 +10,11 @@ function PhoneListCtrl($scope, $http) {
   $scope.orderProp = 'age';
 }
 
-angular.module('phonecatApp', []).controller('PhoneListCtrl', ['$scope', '$http', PhoneListCtrl]);
+
+function PhoneDetailCtrl($scope, $routeParams) {
+  $scope.phoneId = $routeParams.phoneId;
+}
+
+
+myApp.controller('PhoneListCtrl', ['$scope', '$http', PhoneListCtrl]);
+myApp.controller('PhoneDetailCtrl', ['$scope', '$routeParams', PhoneDetailCtrl]);
