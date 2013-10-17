@@ -3,6 +3,9 @@
  * (c) 2010-2012 Google, Inc. http://angularjs.org
  * License: MIT
  */
+
+define("angular/angular-resource",["angular/angular"],function(){
+
 (function(window, angular, undefined) {
 'use strict';
 
@@ -455,3 +458,5 @@ angular.module('ngResource', ['ng']).
 
 
 })(window, window.angular);
+
+});
