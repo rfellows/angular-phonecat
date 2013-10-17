@@ -1,6 +1,6 @@
 'use strict';
 
-define(["phonecat/app", "angular/angular","angular/angular-resource"], function(myApp, angular, Resource){
+define(["phonecat/app", "angular","angular-resource"], function(myApp, angular, Resource){
 	/* Controllers */
 
 	function PhoneListCtrl($scope, Phone) {

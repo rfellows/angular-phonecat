@@ -1,7 +1,7 @@
 'use strict';
 
 /* Services */
-define(["angular/angular","angular/angular-resource"], function(angular, Resource){
+define(["angular","angular-resource"], function(angular, Resource){
 
 	angular.module('phonecatServices', ['ngResource']).
 	    factory('Phone', function($resource){
