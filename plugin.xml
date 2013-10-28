@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="phonecat">
+
+  <static-paths>
+    <static-path url="/phonecat/app" localFolder="app"/>
+  </static-paths>
+
+  <external-resources>
+    <file context="requirejs">content/phonecat/app/phonecat-require-js-cfg.js</file>
+  </external-resources>
+
+</plugin>
