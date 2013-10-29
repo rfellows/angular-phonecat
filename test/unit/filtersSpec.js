@@ -1,18 +1,27 @@
 'use strict';
 
-/* jasmine specs for filters go here */
+pen.define('filterSpec', [
+  'common-ui/angular',
+  'angular-mocks',
+  'angular-scenario',
+  'phonecat/filters'], 
+  function() {
 
-describe('filter', function() {
+	/* jasmine specs for filters go here */
 
-  beforeEach(module('phonecatFilters'));
+	describe('filter', function() {
+
+	  beforeEach(module('phonecatFilters'));
 
 
-  describe('checkmark', function() {
+	  describe('checkmark', function() {
 
-    it('should convert boolean values to unicode checkmark or cross',
-        inject(function(checkmarkFilter) {
-      expect(checkmarkFilter(true)).toBe('\u2713');
-      expect(checkmarkFilter(false)).toBe('\u2718');
-    }));
-  });
+	    it('should convert boolean values to unicode checkmark or cross',
+	        inject(function(checkmarkFilter) {
+	      expect(checkmarkFilter(true)).toBe('\u2713');
+	      expect(checkmarkFilter(false)).toBe('\u2718');
+	    }));
+	  });
+	});
+
 });

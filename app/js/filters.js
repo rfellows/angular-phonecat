@@ -1,7 +1,7 @@
 'use strict';
 
 /* Filters */
-pen.define(["common-ui/angular","common-ui/angular-resource"], function(ng, Resource){
+pen.define('phonecat/filters', ["common-ui/angular","common-ui/angular-resource"], function(ng, Resource){
 
 	angular.module('phonecatFilters', []).filter('checkmark', function() {
 	  return function(input) {

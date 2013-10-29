@@ -3,14 +3,20 @@ module.exports = function (config) {
     basePath: '../',
 
     files: [
+      'test/testRequireJsConfig.js',
       'app/lib/angular/angular.js',
       'app/lib/angular/angular-*.js',
       'test/lib/angular/angular-mocks.js',
+      'test/lib/angular/angular-scenario.js',
       'app/js/**/*.js',
       'test/unit/**/*.js'
     ],
 
-    frameworks: ['jasmine'],
+    exclude: [
+      'app/js/requirejsConfig.js'
+    ],
+
+    frameworks: ['jasmine', 'requirejs'],
 
     autoWatch: true,
 
@@ -19,6 +25,9 @@ module.exports = function (config) {
     junitReporter: {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
-    }
+    },
+
+    logLevel: LOG_INFO
+
   });
 };

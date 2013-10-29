@@ -1,9 +1,9 @@
 'use strict';
 
 /* App Module */
-pen.define(["common-ui/angular-route"],
+pen.define('phonecat/app', ["common-ui/angular-route"],
 	 
-	function(ng, Resource){
+  function(){
 
 	var myApp = angular.module('phonecatApp', ['phonecatFilters', 'phonecatServices', 'ngRoute']);
 

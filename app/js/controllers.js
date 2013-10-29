@@ -1,6 +1,6 @@
 'use strict';
 
-pen.define([
+pen.define('phonecat/controllers', [
 	"phonecat/app",
 	"common-ui/angular",
 	"common-ui/angular-resource",
