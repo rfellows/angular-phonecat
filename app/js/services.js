@@ -1,7 +1,7 @@
 'use strict';
 
 /* Services */
-pen.define('phonecat/services', ["common-ui/angular","common-ui/angular-resource"], function(ng, Resource){
+pen.define(["common-ui/angular","common-ui/angular-resource"], function(angular, Resource){
 
 	angular.module('phonecatServices', ['ngResource']).
 	    factory('Phone', function($resource){

@@ -3,12 +3,17 @@ var tests = Object.keys(window.__karma__.files).filter(function (file) {
 });
 
 pen = {};
-pen.require = requirejs;
-pen.define = define;
+pen.require = function() {
+    require.apply(this, arguments);
+} 
+pen.define = function() {
+    define.apply(this, arguments);
+}
 
-var config = {
-  namespace: 'pen',
-  baseUrl: '/base/app',  
+
+requirejs.config({
+
+  baseUrl: 'base/app',
   paths: {
     'common-ui/angular': 'lib/angular/angular',
     'common-ui/angular-resource': 'lib/angular/angular-resource',
@@ -19,8 +24,9 @@ var config = {
   },
 
   shim: {
-    'common-ui/angular-resource': { deps: ['common-ui/angular'] },
-    'common-ui/angular-route': { deps: ['common-ui/angular'] },
+    'common-ui/angular': { exports: 'angular' },
+    'common-ui/angular-resource': { deps: ['common-ui/angular'], exports: 'Resource' },
+    'common-ui/angular-route': { deps: ['common-ui/angular'], exports: 'Route' },
     'angular-mocks': { deps: ['common-ui/angular-resource'] }
   },
 
@@ -31,6 +37,6 @@ var config = {
   callback: function() {
     window.__karma__.start();
   }
-}
+});
 
-pen.require.config(config);
+// pen.require.config(config);

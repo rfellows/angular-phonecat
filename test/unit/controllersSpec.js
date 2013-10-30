@@ -1,15 +1,12 @@
-pen.define('controllerSpec', [
-  'common-ui/angular',
-  'common-ui/angular-resource',
-  'common-ui/angular-route',
+pen.define([
   'angular-mocks',
-  'angular-scenario',
   'phonecat/app',
   'phonecat/services',
   'phonecat/controller'
-  ], function() {
+  ], function(angular) {
 
   'use strict';
+  console.log('=== controllersSpec.js ===');
 
   /* jasmine specs for controllers go here */
   describe('PhoneCat controllers', function() {

@@ -16,7 +16,8 @@
 
 function setupModuleLoader(window) {
 
-  var $injectorMinErr = minErr('$injector');
+  // var $injectorMinErr = minErr('$injector');
+  var $injectorMinErr = angular.$$minErr('$injector');
 
   function ensure(obj, name, factory) {
     return obj[name] || (obj[name] = factory());

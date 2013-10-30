@@ -11,8 +11,9 @@ var config = {
   },
 
   shim: {
-    'common-ui/angular-resource': { deps: ['common-ui/angular'] },
-    'common-ui/angular-route': { deps: ['common-ui/angular'] }
+    'common-ui/angular': { exports: 'angular' },
+    'common-ui/angular-resource': { deps: ['common-ui/angular'], exports: 'Resource' },
+    'common-ui/angular-route': { deps: ['common-ui/angular'], exports: 'Route' },
   }
 }
 

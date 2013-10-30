@@ -1,13 +1,13 @@
 'use strict';
 
-pen.define('phonecat/controllers', [
+pen.define([
 	"phonecat/app",
 	"common-ui/angular",
 	"common-ui/angular-resource",
 	"common-ui/angular-route"
 	],
 
-	function(myApp, ng, Resource){
+	function(myApp, angular, Resource){
 		/* Controllers */
 
 		function PhoneListCtrl($scope, Phone) {

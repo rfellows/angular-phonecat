@@ -1,7 +1,8 @@
 'use strict';
 
-pen.define('filterSpec', [
+pen.define([
   'common-ui/angular',
+  'common-ui/angular-resource',
   'angular-mocks',
   'angular-scenario',
   'phonecat/filters'], 

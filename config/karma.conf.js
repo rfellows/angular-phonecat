@@ -1,33 +1,33 @@
 module.exports = function (config) {
   config.set({
-    basePath: '../',
+    basePath: '',
+
+    frameworks: ['jasmine', 'requirejs'],
 
     files: [
-      'test/testRequireJsConfig.js',
-      'app/lib/angular/angular.js',
-      'app/lib/angular/angular-*.js',
-      'test/lib/angular/angular-mocks.js',
-      'test/lib/angular/angular-scenario.js',
-      'app/js/**/*.js',
-      'test/unit/**/*.js'
+      {pattern: '../app/lib/angular/angular*.js', included: false},
+      {pattern: '../test/lib/angular/angular*.js', included: false},
+      {pattern: '../app/js/**/*.js', included: false},
+      {pattern: '../test/unit/**/*.js', included: false},
+      '../test/testRequireJsConfig.js'
     ],
 
     exclude: [
-      'app/js/requirejsConfig.js'
+      '../app/js/requirejsConfig.js',
+      '../app/js/main.js'
     ],
-
-    frameworks: ['jasmine', 'requirejs'],
 
     autoWatch: true,
 
     browsers: ['Chrome'],
+    reporters: ['progress'],
 
     junitReporter: {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
     },
 
-    logLevel: LOG_INFO
+    logLevel: config.LOG_DEBUG
 
   });
 };
