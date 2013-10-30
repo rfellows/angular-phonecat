@@ -1,20 +1,23 @@
 module.exports = function (config) {
   config.set({
-    basePath: '',
+    basePath: '../',
 
     frameworks: ['jasmine', 'requirejs'],
 
     files: [
-      {pattern: '../app/lib/angular/angular*.js', included: false},
-      {pattern: '../test/lib/angular/angular*.js', included: false},
-      {pattern: '../app/js/**/*.js', included: false},
-      {pattern: '../test/unit/**/*.js', included: false},
-      '../test/testRequireJsConfig.js'
+      {pattern: 'app/lib/angular/angular.js', included: false},
+      {pattern: 'app/lib/angular/angular-resource.js', included: false},
+      {pattern: 'app/lib/angular/angular-route.js', included: false},
+      {pattern: 'app/lib/angular/angular-mocks.js', included: false},
+      {pattern: 'app/js/*.js', included: false},
+      {pattern: 'app/js/**/*.js', included: false},
+      {pattern: 'test/unit/**/*.js', included: false},
+      'test/testRequireJsConfig.js'
     ],
 
     exclude: [
-      '../app/js/requirejsConfig.js',
-      '../app/js/main.js'
+      'app/js/requirejsConfig.js',
+      'app/js/main.js'
     ],
 
     autoWatch: true,
@@ -27,7 +30,7 @@ module.exports = function (config) {
       suite: 'unit'
     },
 
-    logLevel: config.LOG_DEBUG
+    logLevel: config.LOG_INFO
 
   });
 };

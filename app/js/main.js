@@ -1,10 +1,12 @@
+console.log('=== main.js ===');
+
 pen.require([
-  "common-ui/angular",
-  "phonecat/app",
-  "phonecat/controllers", 
+  "common-ui/angular", 
+  "common-ui/angular-route", 
+  "phonecat/controllers",
   "phonecat/filters",
-  "phonecat/directives",
-  "phonecat/services"], function(){
+  "phonecat/services",
+  "phonecat/directives"], function(){
 
   angular.bootstrap(document , ['phonecatApp']);
 

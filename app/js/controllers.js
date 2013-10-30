@@ -1,5 +1,3 @@
-'use strict';
-
 pen.define([
 	"phonecat/app",
 	"common-ui/angular",
@@ -9,6 +7,8 @@ pen.define([
 
 	function(myApp, angular, Resource){
 		/* Controllers */
+		'use strict';
+
 
 		function PhoneListCtrl($scope, Phone) {
 		  $scope.phones = Phone.query();

@@ -1,12 +1,11 @@
-'use strict';
-
 pen.define([
   'common-ui/angular',
   'common-ui/angular-resource',
   'angular-mocks',
-  'angular-scenario',
   'phonecat/filters'], 
   function() {
+
+	'use strict';
 
 	/* jasmine specs for filters go here */
 

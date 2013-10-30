@@ -1,8 +1,8 @@
 pen.define([
+  'common-ui/angular',
   'angular-mocks',
-  'phonecat/app',
-  'phonecat/services',
-  'phonecat/controller'
+  'phonecat/controllers',
+  'phonecat/app'
   ], function(angular) {
 
   'use strict';
@@ -36,7 +36,7 @@ pen.define([
 
 
       it('should create "phones" model with 2 phones fetched from xhr', function() {
-        expect(scope.phones).toEqual([]);
+        expect(scope.phones.length).toEqual(0);
         $httpBackend.flush();
 
         expect(scope.phones).toEqualData(

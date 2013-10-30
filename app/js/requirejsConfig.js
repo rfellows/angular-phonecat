@@ -1,8 +1,13 @@
 pen = {};
-pen.require = require;
-pen.define = define;
+pen.require = function() {
+    require.apply(this, arguments);
+} 
+pen.define = function() {
+    define.apply(this, arguments);
+}
 
-var config = {
+requirejs.config({
+  baseUrl: '.',
   paths: {
     'common-ui/angular': 'lib/angular/angular',
     'common-ui/angular-resource': 'lib/angular/angular-resource',
@@ -15,6 +20,4 @@ var config = {
     'common-ui/angular-resource': { deps: ['common-ui/angular'], exports: 'Resource' },
     'common-ui/angular-route': { deps: ['common-ui/angular'], exports: 'Route' },
   }
-}
-
-pen.require.config(config);
+});
