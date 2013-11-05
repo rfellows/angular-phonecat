@@ -9,6 +9,7 @@ module.exports = function (config) {
       {pattern: 'app/lib/angular/angular-resource.js', included: false},
       {pattern: 'app/lib/angular/angular-route.js', included: false},
       {pattern: 'app/lib/angular/angular-mocks.js', included: false},
+      {pattern: 'app/lib/ui-bootstrap-tpls-0.6.0.min.js', included: false},
       {pattern: 'app/js/*.js', included: false},
       {pattern: 'app/js/**/*.js', included: false},
       {pattern: 'test/unit/**/*.js', included: false},

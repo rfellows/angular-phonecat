@@ -18,6 +18,7 @@ requirejs.config({
     'common-ui/angular': 'lib/angular/angular',
     'common-ui/angular-resource': 'lib/angular/angular-resource',
     'common-ui/angular-route': 'lib/angular/angular-route',
+    'common-ui/angular-ui-bootstrap': 'lib/ui-bootstrap-tpls-0.6.0.min',
     'angular-mocks': 'lib/angular/angular-mocks',
     'angular-scenario': 'lib/angular/angular-scenario',
     'phonecat': 'js'
@@ -27,6 +28,7 @@ requirejs.config({
     'common-ui/angular': { exports: 'angular' },
     'common-ui/angular-resource': { deps: ['common-ui/angular'], exports: 'Resource' },
     'common-ui/angular-route': { deps: ['common-ui/angular'], exports: 'Route' },
+    'common-ui/angular-ui-bootstrap': { deps: ['common-ui/angular'] },
     'angular-mocks': { deps: ['common-ui/angular-resource'] }
   },
 

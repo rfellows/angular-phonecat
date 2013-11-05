@@ -2,6 +2,7 @@
 var deps = [
   "common-ui/angular", 
   "common-ui/angular-route", 
+  "common-ui/angular-ui-bootstrap",
   "phonecat/controllers",
   "phonecat/filters",
   "phonecat/services",
@@ -9,7 +10,7 @@ var deps = [
   ];
 pen.define(deps, function(angular, Route){
     'use strict';
-	var app = angular.module('phonecatApp', ['phonecatFilters', 'phonecatServices', 'ngRoute']);
+	var app = angular.module('phonecatApp', ['ui.bootstrap', 'phonecatFilters', 'phonecatServices', 'ngRoute']);
 	app.config(['$routeProvider', function($routeProvider) {
 	  $routeProvider.
 	      when('/phones', {templateUrl: 'partials/phone-list.html',   controller: 'PhoneListCtrl'}).

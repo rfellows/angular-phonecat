@@ -1,5 +1,3 @@
-console.log('=== main.js ===');
-
 pen.require([
   "common-ui/angular", 
   "common-ui/angular-route", 

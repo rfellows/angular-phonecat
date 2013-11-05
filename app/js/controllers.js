@@ -18,13 +18,25 @@ pen.define([
 
 
 		function PhoneDetailCtrl($scope, $routeParams, Phone) {
+		  $scope.myInterval = 5000;
+
 		  $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
 		    $scope.mainImageUrl = phone.images[0];
-		  });
 
+		    $scope.slides = [];
+		    for( var i = 0; i < phone.images.length; i++ ) {
+			    $scope.slides.push({
+			    	image: phone.images[i],
+			    	text: phone.name,
+			    	description: phone.description
+			    })
+		    }
+		  });
+		  
 		  $scope.setImage = function(imageUrl) {
 		    $scope.mainImageUrl = imageUrl;
 		  }
+
 		}
 
 
